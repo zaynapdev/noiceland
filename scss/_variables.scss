@@ -1,0 +1,19 @@
+$main-font: 'Libre Franklin', sans-serif;
+$font: 'Tenor Sans', sans-serif;
+
+$gray: #999999;
+$dark-gray: #666666;
+$border-color: #E6E6E6;
+$dark: #141414;
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin gray-font($color, $weight) {
+    letter-spacing: 1px;
+    font-size: 10px;
+    color: $color;
+    font-weight: $weight;
+}

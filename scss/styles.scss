@@ -1,0 +1,218 @@
+@import '_variables.scss';
+
+html{
+    font-family: $main-font;
+}
+
+h1, h2{
+    font-family: $font;
+    line-height: 42px;
+    font-size: 36px;
+    font-weight: 400;
+}
+h2{
+    font-size: 20px;
+    line-height: 24px;
+    margin: 18px 0 15px;
+}
+
+.header{
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid $border-color;
+
+    &__nav{
+        max-width: 1200px;
+        margin: auto;
+        height: 90px;
+        font-size: 14px;
+
+        @include flex;
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    &__list{
+        list-style: none;
+        gap: 40px;
+        padding: 0;
+
+        @include flex;
+    }
+}
+
+.main{
+    margin: 150px auto 0;
+    max-width: 1200px;
+
+}
+
+section{
+    margin: 60px 0 10px;
+    text-transform: uppercase;
+    border-bottom: 1px solid $border-color;
+}
+
+.post{
+    @include flex;
+
+    width: 32.5%;
+    flex-direction: column;
+    align-items: unset;
+    margin-bottom: 50px;
+    height: fit-content;
+
+    img{
+        margin-bottom: 24px;
+    }
+}
+
+.home{
+
+    &__post{
+        display: flex;
+        gap: 50px;
+        align-items: flex-start;
+        margin-bottom: 60px;
+    }
+
+    &__type{
+        @include gray-font($gray, 400);
+        text-transform: uppercase;
+    }
+
+    &__text{
+        font-size: 16px;
+        color: $dark-gray;
+        text-transform: capitalize;
+        font-family: 'Source Serif Pro';
+        margin: 28px 0;
+    }
+
+    &__author{
+        @include gray-font(black, 700)
+    }
+
+    &__posts{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.latest{
+    
+    &__post{
+        width: 24.1%;
+
+    }
+
+    &__nav{
+        margin: 90px 0 30px;
+    }
+
+    &__btn{
+        @include gray-font(black, 400);
+        text-transform: uppercase; 
+        background-color: unset;
+        border: 1px solid black;
+        padding: 21px 26px;
+        margin: 40px 0 90px;
+        font-family: inherit;
+        transition: .3s;
+        cursor: pointer;
+
+        &:hover{
+            background-color: black;
+            color: white;
+        }
+    }
+
+    &__button{
+        @include flex;
+        flex-direction: column;
+    }
+}
+
+.featured{
+    border: none;
+    &__post{
+        width: 49.3%;
+    }
+}
+
+.footer{
+    background-color: $dark;
+    margin: 0 -8px -8px;
+
+    .home__type{
+        color: $dark-gray;
+    }
+
+    &__container{
+        padding: 20px 0;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    &__content{
+        display: flex;
+        padding: 60px 0;
+        flex-wrap: wrap;
+        gap: 100px;
+    }
+
+    &__section{
+        gap: 15px;
+        align-items: baseline;
+        border-color: #4D4D4D;
+    }
+    &__info{
+        input{
+            padding: 18px 24px;
+        }
+        input::placeholder{
+            @include gray-font($dark-gray, 400);
+        }
+    }
+    &__btns{
+        display: flex;
+        margin-top: 20px;
+    }
+    &__btn{
+        background-color: black;
+        @include gray-font(white, 400);
+        padding: 18px 24px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+    }
+
+    .list{
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        flex-direction: column;
+
+        &-max{
+            gap: 15px 90px;
+            height: 70px;
+        }
+    }
+    .categories{
+        width: 65%;
+    }
+    .email{
+        width: 25%;
+    }
+}
